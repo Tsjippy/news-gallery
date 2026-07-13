@@ -12,13 +12,14 @@ import {
   PanelRow,
   Spinner,
   CheckboxControl,
+  ToggleControl,
   __experimentalNumberControl as NumberControl,
   __experimentalInputControl as InputControl,
   ColorPicker,
 } from "@wordpress/components";
 
 const Edit = ({ setAttributes, attributes, context }) => {
-  const { postTypes, amount, categories, speed, title, color, gradient } = attributes;
+  const { postTypes, amount, categories, title, color, gradient } = attributes;
   const curPostType = context["postType"];
 
   /**
