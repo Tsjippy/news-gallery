@@ -2,15 +2,22 @@
 ## [Unreleased] - yyyy-mm-dd
 
 ### Added
+
+### Changed
+
+### Fixed
+
+### Updated
+
+## [1.0.1] - 2026-07-13
+
+
+### Added
 - first code
 - css
 
 ### Changed
 - loading pos categories in block
-
-### Fixed
-
-### Updated
 
 ## [10.3.2] - 2026-07-12
 
