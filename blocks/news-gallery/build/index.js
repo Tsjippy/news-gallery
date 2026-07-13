@@ -94,7 +94,9 @@ const Edit = ({
           }).then(res => {
             let cats = availableCategories;
             cats[type.slug][taxonomy] = res;
-            setAvailableCategories(cats);
+            setAvailableCategories({
+              ...cats
+            });
           });
         });
       });
@@ -161,8 +163,13 @@ const Edit = ({
      */
     postTypes.forEach(postType => {
       rendered.push(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
-        children: postType.charAt(0).toUpperCase() + postType.slice(1)
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("b", {
+          children: postType.charAt(0).toUpperCase() + postType.slice(1)
+        })
       }));
+      if (Object.keys(availableCategories[postType]).length == 0) {
+        rendered.push("Loading...");
+      }
       Object.keys(availableCategories[postType]).forEach(tax => {
         rendered.push(tax.charAt(0).toUpperCase() + tax.slice(1));
         Object.values(availableCategories[postType][tax]).map(c => {

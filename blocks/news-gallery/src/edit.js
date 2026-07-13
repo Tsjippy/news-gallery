@@ -53,33 +53,33 @@ const Edit = ({ setAttributes, attributes, context }) => {
       let processedTax  = [];
       postTypes.forEach((type) => {
         let cats = availableCategories;
-          if (cats[type.slug] == undefined) {
-            cats[type.slug] = {};
+        if (cats[type.slug] == undefined) {
+          cats[type.slug] = {};
+        }
+
+        type.taxonomies.forEach((taxonomy) => {
+          if(taxonomy == 'category'){
+            taxonomy = 'categories';
+          } else if(taxonomy == 'post_tag'){
+            taxonomy = 'tags';
           }
 
-          type.taxonomies.forEach((taxonomy) => {
-            if(taxonomy == 'category'){
-              taxonomy = 'categories';
-            } else if(taxonomy == 'post_tag'){
-              taxonomy = 'tags';
-            }
+          // We don't have to do this more than once
+          if(processedTax.indexOf(taxonomy) > -1){
+            return;
+          }
 
-            // We don't have to do this more than once
-            if(processedTax.indexOf(taxonomy) > -1){
-              return;
-            }
+          processedTax.push(taxonomy);
 
-            processedTax.push(taxonomy);
+          apiFetch({ path: `/wp/v2/${taxonomy}/?per_page=100`, }).then(res => {
+            let cats = availableCategories;
+            
+            cats[type.slug][taxonomy] = res;
 
-            apiFetch({ path: `/wp/v2/${taxonomy}/?per_page=100`, }).then(res => {
-              let cats = availableCategories;
-              
-              cats[type.slug][taxonomy] = res;
-
-              setAvailableCategories(cats);
-            });
+            setAvailableCategories({...cats});
           });
         });
+      });
     });
   }, []);
 
@@ -154,8 +154,12 @@ const Edit = ({ setAttributes, attributes, context }) => {
      */
     postTypes.forEach((postType) => {
       rendered.push(
-        <h2>{postType.charAt(0).toUpperCase() + postType.slice(1)}</h2>,
+        <h2><b>{postType.charAt(0).toUpperCase() + postType.slice(1)}</b></h2>,
       );
+
+      if(Object.keys(availableCategories[postType]).length == 0){
+        rendered.push("Loading...");
+      }
 
       Object.keys(availableCategories[postType]).forEach((tax) => {
         rendered.push(tax.charAt(0).toUpperCase() + tax.slice(1));
