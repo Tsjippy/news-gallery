@@ -6,6 +6,7 @@
 ### Changed
 
 ### Fixed
+- show full with
 
 ### Updated
 
