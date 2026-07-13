@@ -2,15 +2,13 @@
 ## [Unreleased] - yyyy-mm-dd
 
 ### Added
+- first code
 
 ### Changed
 
 ### Fixed
 
 ### Updated
-
-## [1.0.0] - 2026-07-13
-
 
 ## [10.3.2] - 2026-07-12
 
