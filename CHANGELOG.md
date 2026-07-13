@@ -6,6 +6,7 @@
 - css
 
 ### Changed
+- loading pos categories in block
 
 ### Fixed
 
