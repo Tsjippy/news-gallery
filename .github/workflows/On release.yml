@@ -1,0 +1,8 @@
+name: On release
+on:
+    release:
+        types: [released]
+jobs:
+  call-shared-workflow:
+    uses: Tsjippy/shared-functionality/.github/workflows/SharedUpdateVersion.yml@main
+                

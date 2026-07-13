@@ -1,0 +1,5 @@
+name: Update Changelog
+on: [push]
+jobs:
+  call-shared-workflow:
+    uses: Tsjippy/shared-functionality/.github/workflows/SharedUpdateChangelog.yml@main

@@ -1,0 +1,15 @@
+{
+  "schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tsjippy-news-gallery/show",
+  "version": "0.1.0",
+  "title": "News gallery",
+  "category": "widgets",
+  "description": "A dynamic gallery of pages",
+  "textdomain": "tsjippy",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "usesContext": [
+    "postType"
+  ]
+}
