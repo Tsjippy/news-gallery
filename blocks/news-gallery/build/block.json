@@ -36,6 +36,10 @@
     "gradient": {
       "type": "boolean",
       "default": false
+    },
+    "age": {
+      "type": "integer",
+      "default": 60
     }
   }
 }
