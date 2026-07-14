@@ -34,11 +34,7 @@ function showNewsGallery($attributes)
         'post_status'         => 'publish',
         'date_query'          => [
             [
-                'after' => [
-                    'year'  => gmdate('Y', strtotime("-$maxNewsAge days")),
-                    'month' => gmdate('m', strtotime("-$maxNewsAge days")),
-                    'day'   => gmdate('d', strtotime("-$maxNewsAge days")),
-                ]
+                'after' => "$maxNewsAge days ago  at midnight" 
             ]
         ],
         //exclude private events and user pages
