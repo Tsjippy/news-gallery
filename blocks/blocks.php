@@ -34,7 +34,7 @@ function showNewsGallery($attributes)
         'post_status'         => 'publish',
         'date_query'          => [
             [
-                'after' => "$maxNewsAge days ago  at midnight" 
+                'after' => "$maxNewsAge days ago at midnight" 
             ]
         ],
         //exclude private events and user pages
