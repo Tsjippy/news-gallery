@@ -17,10 +17,18 @@
 	"dependencies": {
 		"@wordpress/block-editor": "latest",
 		"@wordpress/blocks": "latest",
-		"@wordpress/i18n": "latest"
+		"@wordpress/data": "^10.51.0",
+		"@wordpress/i18n": "latest",
+		"@wordpress/api-fetch": "latest",
+		"@wordpress/element": "latest",
+		"@wordpress/server-side-render": "latest",
+		"@wordpress/core-data": "latest",
+		"@wordpress/components": "latest"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^32.6.0"
 	}
 }
+
+
 
