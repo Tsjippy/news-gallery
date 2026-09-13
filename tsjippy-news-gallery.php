@@ -10,7 +10,7 @@ namespace TSJIPPY\NEWSGALLERY;
  * AuthorURI:            harmseninnigeria.nl
  * Requires at least:    6.3
  * Requires PHP:         8.3
- * Plugin URI:            https://github.com/Tsjippy/news-gallery
+ * Plugin URI:           https://github.com/Tsjippy/news-gallery
  * Tested:               7.1
  * TextDomain:           tsjippy
  * Requires Plugins:    
