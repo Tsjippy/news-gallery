@@ -20,12 +20,12 @@
 		"@wordpress/blocks": "latest",
 		"@wordpress/components": "latest",
 		"@wordpress/core-data": "latest",
-		"@wordpress/data": "^10.55.0",
+		"@wordpress/data": "^10.56.0",
 		"@wordpress/element": "latest",
 		"@wordpress/i18n": "latest",
 		"@wordpress/server-side-render": "latest"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^35.0.0"
+		"@wordpress/scripts": "^36.0.0"
 	}
 }
