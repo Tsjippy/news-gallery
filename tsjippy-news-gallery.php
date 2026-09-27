@@ -5,13 +5,13 @@ namespace TSJIPPY\NEWSGALLERY;
 /**
  * Plugin Name:          Tsjippy News Gallery
  * Description:          This plugin adds a News Gallery Block
- * Version:              1.3.0
+ * Version:              1.3.1
  * Author:               Ewald Harmsen
  * AuthorURI:            harmseninnigeria.nl
  * Requires at least:    6.3
  * Requires PHP:         8.3
  * Plugin URI:           https://github.com/Tsjippy/news-gallery
- * Tested:               7.1.2
+ * Tested:               7.1
  * TextDomain:           tsjippy
  * Requires Plugins:    
  * License: GPLv2 or later
